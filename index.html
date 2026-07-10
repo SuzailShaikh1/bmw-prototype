@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMW M — The Ultimate Driving Machine</title>
+<!-- <link rel="icon" href="" type="image/x-icon"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+  
+</style>
+</head>
+<body>
+
+<canvas id="speedCanvas"></canvas>
+
+<nav id="mainNav">
+  <div class="wrap navbar">
+    <div class="logo"><span class="roundel"></span>BMW <span style="color:var(--cyan);font-size:16px;letter-spacing:.2em;">M</span></div>
+    <div class="navlinks">
+      <a href="#lineup">Lineup</a>
+      <a href="#performance">Performance</a>
+      <a href="#technology">Technology</a>
+      <a href="#configure">Configure</a>
+    </div>
+    <a href="#configure" class="nav-cta">Build Yours</a>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">2026 M Performance Line</div>
+      <h1>THE ULTIMATE<br>DRIVING <span class="grad-text">MACHINE</span></h1>
+      <p class="lead">Engineered in Munich, tuned on the Nürburgring. Every M car is built around one principle — the road should disappear beneath you.</p>
+      <div class="hero-actions">
+        <a href="#lineup" class="btn btn-primary">Explore The Lineup</a>
+        <a href="#configure" class="btn btn-ghost">Build & Price</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num" data-count="444" data-suffix="hp">0<span>hp</span></div><div class="stat-label">M4 Competition Output</div></div>
+        <div class="stat"><div class="stat-num" data-count="3.8" data-decimal="1" data-suffix="s">0<span>s</span></div><div class="stat-label">0–60 mph</div></div>
+        <div class="stat"><div class="stat-num" data-count="280" data-suffix="km/h">0<span>km/h</span></div><div class="stat-label">Top Track Speed</div></div>
+      </div>
+    </div>
+     <div class="car-stage">
+      
+    <model-viewer id="heroModel" src="m43d.glb" alt="BMW M5 Competition" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" exposure="1.2" style="width:100%;height:100%;"></model-viewer>
+    <div class="scroll-cue"><span></span><div class="line"></div>
+      <div class="car-glow"></div>
+      <div class="car-track"></div>
+      
+        <defs>
+          <linearGradient id="bodyGrad" x1="40" y1="55" x2="560" y2="165" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#12161f"/>
+            <stop offset=".5" stop-color="#0a3d91"/>
+            <stop offset="1" stop-color="#040508"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<!-- LINEUP -->
+<section id="lineup">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>The M Lineup</h2>
+      <p>From the compact M2 to the flagship M5 — three distinct characters, one shared obsession with the apex.</p>
+    </div>
+    <div class="lineup reveal-stagger">
+
+      <div class="car-card">
+        <span class="badge">// COUPE</span>
+        <img src="m2-exterior-right-front-three-quarter-3 (1)-Photoroom.png" alt="BMW M2 Competition" class="car-img" height=170px width=300px>
+        <!-- <svg viewBox="0 0 300 90" fill="none"><path d="M10 65 C 20 45,45 38,75 36 C 90 24,120 18,150 18 C 182 18,208 24,222 37 C 255 40,280 48,290 65 L290 72 L10 72 Z" fill="none" stroke="#4fc3f7" stroke-width="1.5"/><circle cx="72" cy="73" r="13" stroke="#1c69d4" stroke-width="1.5" fill="none"/><circle cx="222" cy="73" r="13" stroke="#1c69d4" stroke-width="1.5" fill="none"/></svg> -->
+        <h3>M2</h3>
+        <div class="tagline">Compact chassis. Uncompromising rear-wheel drive attitude.</div>
+        <div class="spec-row"><span>Engine</span><b>3.0L Twin-Turbo I6</b></div>
+        <div class="spec-row"><span>Power</span><b>453 hp</b></div>
+        <div class="spec-row"><span>0–60 mph</span><b>3.9s</b></div>
+        <a href="#configure" class="cta-link">Configure M2</a>
+      </div>
+
+      <div class="car-card">
+        <span class="badge">// SEDAN</span>
+                <img src="m5sedan.png" alt="BMW M2 Competition" class="car-img" height=170px width=270px>
+
+        <!-- <svg viewBox="0 0 300 90" fill="none"><path d="M8 66 C 16 42,40 34,70 32 C 82 20,115 14,150 14 C 188 14,215 20,228 33 C 258 36,284 46,292 66 L292 73 L8 73 Z" fill="none" stroke="#4fc3f7" stroke-width="1.5"/><circle cx="70" cy="74" r="13" stroke="#1c69d4" stroke-width="1.5" fill="none"/><circle cx="228" cy="74" r="13" stroke="#1c69d4" stroke-width="1.5" fill="none"/></svg> -->
+        <h3>M5</h3>
+        <div class="tagline">The benchmark super-sedan — power without pretense.</div>
+        <div class="spec-row"><span>Engine</span><b>4.4L Twin-Turbo V8 + eDrive</b></div>
+        <div class="spec-row"><span>Power</span><b>717 hp Combined</b></div>
+        <div class="spec-row"><span>0–60 mph</span><b>3.1s</b></div>
+        <a href="#configure" class="cta-link">Configure M5</a>
+      </div>
+
+      <div class="car-card">
+        <span class="badge">// SUV</span>
+        <img src="x5m-Photoroom.png" alt="BMW M2 Competition" class="car-img" height=170px width=300px>
+
+        <!-- <svg viewBox="0 0 300 90" fill="none"><path d="M6 60 C 12 32,35 22,68 20 C 80 8,118 2,150 2 C 186 2,216 10,232 22 C 262 24,288 36,294 60 L294 74 L6 74 Z" fill="none" stroke="#4fc3f7" stroke-width="1.5"/><circle cx="66" cy="75" r="14" stroke="#1c69d4" stroke-width="1.5" fill="none"/><circle cx="232" cy="75" r="14" stroke="#1c69d4" stroke-width="1.5" fill="none"/></svg> -->
+        <h3>X5 M</h3>
+        <div class="tagline">M-tuned performance meets uncompromising versatility.</div>
+        <div class="spec-row"><span>Engine</span><b>4.4L Twin-Turbo V8</b></div>
+        <div class="spec-row"><span>Power</span><b>617 hp</b></div>
+        <div class="spec-row"><span>0–60 mph</span><b>3.6s</b></div>
+        <a href="#configure" class="cta-link">Configure X5 M</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="performance" class="perf" style="padding:0;">
+  <div class="wrap" style="padding-top:80px;padding-bottom:80px;">
+    <div class="section-head reveal" style="margin-bottom:40px;">
+      <h2>Numbers That Matter</h2>
+      <p>Every figure earned on the same track BMW M engineers use to validate the road cars.</p>
+    </div>
+  </div>
+  <div class="perf-grid reveal-stagger">
+    <div class="perf-item"><div class="perf-num" data-count="59">0<small>years</small></div><div class="perf-label">Of M Division Heritage</div></div>
+    <div class="perf-item"><div class="perf-num" data-count="8">0<small>spd</small></div><div class="perf-label">M Steptronic Transmission</div></div>
+    <div class="perf-item"><div class="perf-num" data-count="50">0<small>/50</small></div><div class="perf-label">Front/Rear Weight Balance</div></div>
+    <div class="perf-item"><div class="perf-num" data-count="4">0<small>WD</small></div><div class="perf-label">M xDrive Available</div></div>
+  </div>
+</section>
+
+
+<section id="technology">
+  <div class="wrap split">
+    <div class="split-visual reveal">
+      <!-- <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="ring r3"></div> -->
+      <!-- <div class="center-mark">M XDRIVE<br>TORQUE VECTORING</div> -->
+      <img src="Gemini_Generated_Image_ge8zf2ge8zf2ge8z.png" height="370px" width="100%" alt="M xDrive Torque Vectoring" class="tech-img">
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Engineering</div>
+      <h2 style="font-size:clamp(34px,4.5vw,56px);text-transform:uppercase;margin:16px 0 8px;">Built Around The Driver</h2>
+      <ul class="feature-list">
+        <li>
+          <span class="feature-num">01</span>
+          <div><h4>Adaptive M Suspension</h4><p>Electronically controlled dampers adjust in milliseconds, reading the road and your inputs simultaneously.</p></div>
+        </li>
+        <li>
+          <span class="feature-num">02</span>
+          <div><h4>M Carbon Ceramic Brakes</h4><p>50% lighter than standard steel discs, engineered to resist fade lap after lap.</p></div>
+        </li>
+        <li>
+          <span class="feature-num">03</span>
+          <div><h4>Active M Differential</h4><p>Distributes torque across the rear axle instantly for maximum traction out of every corner.</p></div>
+        </li>
+        <li>
+          <span class="feature-num">04</span>
+          <div><h4>M Drive Professional</h4><p>Launch control, drift analyzer, and lap timer — track telemetry built into the dash.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section id="configure" class="config">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="justify-content:center;">Build & Price</div>
+    <h2 style="font-size:clamp(36px,6vw,72px);text-transform:uppercase;margin:18px 0 10px;">Make It Yours</h2>
+    <p style="color:var(--muted);max-width:460px;margin:0 auto;font-size:14px;">Choose a signature M color to preview your build.</p>
+    <div class="car-model-live" style="width:100%;height:300px;margin:24px 0 16px;">
+      <model-viewer id="configModel" src="bmw_m5_cs_f90.glb" alt="BMW M5 Competition" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" exposure="1.2" style="width:100%;height:100%;"></model-viewer>
+    <div class="swatches">
+      <div class="swatch active" style="background:#1c69d4;" data-name="San Marino Blue"></div>
+      <div class="swatch" style="background:#0c0c0c;border:1px solid #333;" data-name="Sapphire Black"></div>
+      <div class="swatch" style="background:#c7cad1;" data-name="Brooklyn Grey"></div>
+      <div class="swatch" style="background:#7a1620;" data-name="Toronto Red"></div>
+      <div class="swatch" style="background:#e8ecef;" data-name="Alpine White"></div>
+      <div class="swatch" style="background:#0d2537;" data-name="Alpine White"></div>
+      <div class="swatch" style="background:#ff0303;" data-name="Alpine White"></div>
+      <div class="swatch" style="background:#1d0a38;" data-name="Alpine White"></div>
+      <div class="swatch" style="background:#032d26;" data-name="Alpine White"></div>
+    </div>
+    <div id="colorName" class="mono" style="color:var(--cyan);font-size:12px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:36px;">San Marino Blue</div>
+    <a href="#" class="btn btn-primary">Start Your Build</a>
+  </div>
+</section>
+
+
+<section class="cta-banner">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="justify-content:center;">Test Drive</div>
+    <h2>FEEL IT<br>FOR YOURSELF</h2>
+    <p>Book a track-day test drive at your nearest M Performance Center and experience the difference.</p>
+    <a href="#" class="btn btn-primary">Schedule A Test Drive</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:14px;"><span class="roundel"></span>BMW <span style="color:var(--cyan);font-size:16px;">M</span></div>
+        <p style="color:var(--muted);font-size:13px;line-height:1.7;max-width:260px;">A concept showcase site built for demonstration purposes — not an official BMW property.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Models</h5>
+        <a href="#lineup">M2 Coupe</a>
+        <a href="#lineup">M5 Sedan</a>
+        <a href="#lineup">X5 M</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#">About M Division</a>
+        <a href="#">Motorsport</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <a href="#">Find A Dealer</a>
+        <a href="#configure">Build & Price</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Demo Concept Site — Not affiliated with BMW AG</span>
+      <span>Designed for demonstration · Black &amp; Blue Theme</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+</body>
+</html>
